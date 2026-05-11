@@ -6,21 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:links": "echo 'Not implemented'",
+    "validate:meta": "echo 'Not implemented'",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^16.2.6",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^1.14.0",
+    "next": "14.2.35",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.35"
+    "schema-dts": "^2.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.35"
+    "typescript": "^5"
   }
 }
