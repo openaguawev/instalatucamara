@@ -30,8 +30,8 @@ export default function Home() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-            Protegé tu hogar sin pagar abonos <br className="hidden md:block"/>
-            <span className="text-accent">guías honestas de seguridad</span>
+            Cámaras de seguridad para el hogar —<br className="hidden md:block"/>
+            <span className="text-accent">instalás vos mismo sin abonos</span>
           </h1>
           
           <p className="text-lg md:text-xl text-surface/80 max-w-2xl mx-auto">

@@ -11,4 +11,5 @@ export interface ArticleFrontmatter {
   wordCount: number
   readingTime: number           // minutos
   noindex?: boolean
+  faqs?: { q: string; a: string }[] // optional FAQ pairs for FAQPage schema
 }

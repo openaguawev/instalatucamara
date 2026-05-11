@@ -5,7 +5,7 @@ import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { BreadcrumbNav } from '@/components/ui/BreadcrumbNav';
 import { ProductCard } from '@/components/ui/ProductCard';
 import { getProductById } from '@/data/products';
-import type { Article, WithContext } from 'schema-dts';
+import type { Article, FAQPage, WithContext } from 'schema-dts';
 
 import React from "react";
 
@@ -98,11 +98,69 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     dateModified: frontmatter.updatedAt,
   };
 
+  const faqSchema: WithContext<FAQPage> = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: frontmatter.faqs?.map((faq: { q: string; a: string }) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })) ?? [
+      {
+        '@type': 'Question',
+        name: '¿Se puede instalar una cámara exterior sin electricista?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Totalmente. Las cámaras WiFi solo requieren hacer un par de agujeros con el taladro y enchufarlas a un toma común. Los sistemas DVR traen cables pre-armados (cable siamés) que llevan video y energía en un solo cable.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Cuánto almacenamiento necesito?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Una tarjeta SD de 64GB en una cámara WiFi suele guardar entre 3 y 5 días de grabación continua. Un DVR con un disco de 1TB graba aproximadamente 15 días continuos de 4 cámaras.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Funcionan las cámaras WiFi con lluvia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sí, siempre y cuando estén certificadas como IP66 o superior. Lo que sí puede afectar la lluvia intensa es la señal WiFi si el router está muy lejos.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Qué diferencia hay entre cámara WiFi y CCTV/DVR?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'La cámara WiFi es independiente: graba en su propia memoria y se conecta sin cables de video. El CCTV/DVR usa un grabador central conectado por cables. El WiFi es más fácil de instalar; el DVR es más seguro y estable a largo plazo.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Cuántas cámaras necesito para cubrir el frente de mi casa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Para un frente estándar de 8.66 metros en CABA o GBA, dos cámaras cruzadas en las esquinas superiores es lo ideal. Si es solo para ver la puerta, una sola enfocando al acceso basta.',
+        },
+      },
+    ],
+  };
+
   return (
     <article className="min-h-screen bg-bg">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       {/* Article Header */}
