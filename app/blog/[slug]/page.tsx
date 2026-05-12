@@ -6,8 +6,8 @@ import { BreadcrumbNav } from '@/components/ui/BreadcrumbNav';
 import { ProductCard } from '@/components/ui/ProductCard';
 import { getProductById } from '@/data/products';
 import type { Article, FAQPage, WithContext } from 'schema-dts';
-
 import React from "react";
+import remarkGfm from 'remark-gfm';
 
 // Configuración de componentes personalizados para MDX
 const components = {
@@ -186,6 +186,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
             <MDXRemote 
               source={content} 
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
               components={{
                 ...components,
                 ProductCard: (props: { id: string, position?: number }) => <components.ProductCard {...props} articleSlug={params.slug} />

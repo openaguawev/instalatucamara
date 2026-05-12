@@ -23,3 +23,40 @@
     color: var(--foreground);
   }
 }
+
+/* MDX Table styles — remark-gfm */
+.prose table {
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.prose thead {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+.prose th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.prose tr:nth-child(even) td {
+  background-color: var(--color-bg);
+}
+.prose td strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+

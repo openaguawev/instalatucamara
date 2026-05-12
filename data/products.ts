@@ -18,7 +18,7 @@ export const products: MLProduct[] = [
     pros: ["Alta confiabilidad de marca", "Compatible con cámaras 4 en 1", "Acceso remoto por app"],
     cons: ["Requiere configuración inicial técnica"],
     specs: { "Canales": "8", "Resolución": "1080p", "Compresión": "H.265+", "Almacenamiento": "Hasta 6TB HDD" },
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_667464-MLA71416576748_082023-F.webp", // placeholder ml image
+    image: "/images/hikvision-dvr.webp",
     available: true,
   },
   {
@@ -38,7 +38,7 @@ export const products: MLProduct[] = [
     pros: ["Visión nocturna incluida", "Intercomunicador bidireccional", "Sin suscripción mensual"],
     cons: ["Rango de alcance limitado a WiFi del hogar"],
     specs: { "Conectividad": "WiFi 2.4GHz", "Visión nocturna": "Sí", "Audio": "Bidireccional" },
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_611801-MLA71416576748_082023-F.webp", // placeholder ml image
+    image: "/images/gadnic-camera.webp",
     available: true,
   },
   {
@@ -58,7 +58,7 @@ export const products: MLProduct[] = [
     pros: ["Todo incluido para instalación", "Sin abono mensual", "App de monitoreo gratis"],
     cons: ["Resolución 720p, no 1080p"],
     specs: { "Cámaras incluidas": "4", "DVR": "4 canales", "Almacenamiento": "64GB incluido" },
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_900000-MLA71416576748_082023-F.webp", // placeholder ml image
+    image: "/images/gadnic-kit.webp",
     available: true,
   },
   {
@@ -78,7 +78,7 @@ export const products: MLProduct[] = [
     pros: ["Más vendida de Argentina", "1080p Full HD", "Visión nocturna"],
     cons: ["Requiere WiFi estable"],
     specs: { "Resolución": "1080p", "Conectividad": "WiFi", "Visión nocturna": "Sí", "Tipo": "Domo PTZ" },
-    image: "/images/product-placeholder.webp",
+    image: "/images/gadnic-camera.webp",
     available: true,
   },
   {
@@ -98,7 +98,7 @@ export const products: MLProduct[] = [
     pros: ["PTZ motorizada 360°", "Full HD 1080p", "App control remoto"],
     cons: ["Precio más alto que modelos fijos"],
     specs: { "Resolución": "1080p", "Movimiento": "PTZ 360°", "Conectividad": "WiFi", "Visión nocturna": "Sí" },
-    image: "/images/product-placeholder.webp",
+    image: "/images/gadnic-camera.webp",
     available: true,
   },
   {
@@ -118,7 +118,7 @@ export const products: MLProduct[] = [
     pros: ["Marca Hikvision — alta confiabilidad", "Slot microSD incluido", "Precio excelente"],
     cons: ["Diseñada principalmente para interior"],
     specs: { "Resolución": "1080p", "Conectividad": "WiFi", "Almacenamiento": "MicroSD", "Marca padre": "Hikvision" },
-    image: "/images/product-placeholder.webp",
+    image: "/images/ezviz-camera.webp",
     available: true,
   },
   {
@@ -138,7 +138,7 @@ export const products: MLProduct[] = [
     pros: ["4 cámaras incluidas", "Sin DVR — todo WiFi", "Fácil instalación"],
     cons: ["Depende 100% del WiFi del hogar"],
     specs: { "Cámaras": "4", "Resolución": "1080p", "Tipo": "Sistema WiFi", "DVR": "No requiere" },
-    image: "/images/product-placeholder.webp",
+    image: "/images/geotek-kit.webp",
     available: true,
   },
 ];
